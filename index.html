@@ -269,6 +269,37 @@
             opacity: 0.8;
             z-index: 1;
         }
+        .portfolio-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+          transition: transform 0.3s ease;
+        }
+        
+        .portfolio-image:hover {
+          transform: scale(1.02);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .portfolio-image {
+            height: 150px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .portfolio-image {
+            height: 120px;
+          }
+        }
+        
+        .project-media {
+          width: 100%;
+          max-height: 400px;
+          border-radius: 8px;
+          object-fit: cover;
+        }
         
         .skills-grid {
             display: grid;
@@ -439,7 +470,7 @@
                 <i class="fas fa-robot"></i> Robotics Projects
             </button>
             <button class="nav-tab" data-page="engineering">
-                <i class="fas fa-cogs"></i> Engineering Projects
+                <i class="fas fa-cogs"></i> Optimization Projects
             </button>
             <button class="nav-tab" data-page="analytics">
                 <i class="fas fa-chart-bar"></i> Data Analytics
@@ -457,9 +488,11 @@
             <h2 class="section-title">Project Team Experience</h2>
             <div class="project-grid">
                 <div class="project-card" data-link="https://www.olinrocketry.com/">
-                    <div class="image-placeholder">
+                    <!--<div class="image-placeholder">
                        <i class="fas fa-rocket"></i>
-                       </div>
+                    </div>-->
+                    <img src="images/rocket.jpg" class="portfolio-image">
+                    
                     <div class="card-content">
                         <h3>Olin Rocketry — Propulsion Subteam</h3>
                         <span class="project-dates">August 2023 – May 2025</span>
@@ -473,9 +506,14 @@
                 </div>
                 
                 <div class="project-card" data-link="https://www.olinelectricmotorsports.com/">
-                    <div class="image-placeholder">
+                    <!--<div class="image-placeholder">
                        <i class="fas fa-car"></i>
-                       </div>
+                    </div>-->
+                    <video class="project-media" controls autoplay muted loop>
+                      <source src="images/formula_short.mp4" type="video/mp4">
+                      <source src="images/formula_short.webm" type="video/webm">
+                      Your browser does not support the video tag.
+                    </video>
                     <div class="card-content">
                         <h3>Olin Electric Motorsports — Suspension Subteam</h3>
                         <span class="project-dates">August 2023 – May 2024</span>
@@ -495,10 +533,12 @@
             <h2 class="section-title">Robotics Projects</h2>
             <div class="project-grid">
                 <div class="project-card" data-link="https://github.com/chrdn/machine_vision_project">
-                    
+                    <!--
                     <div class="image-placeholder">
                         <i class="fas fa-eye"></i>
                     </div>
+                    -->
+                    <img src="images/computer_vis.png" class="portfolio-image">
                     
                     <div class="card-content">
                         <h3>Computer Vision Project</h3>
@@ -517,9 +557,12 @@
                 </div>
                 
                 <div class="project-card" data-link="https://arib2003.github.io/neato_temple_run/">
+                    <!--
                     <div class="image-placeholder">
                         <i class="fas fa-running"></i>
-                    </div>
+                    </div>-->
+                    
+                    <img src="images/neato_temple_run.png" class="portfolio-image">
                     <div class="card-content">
                         <h3>Neato Temple Run</h3>
                         <span class="project-dates">Fall 2024</span>
@@ -537,9 +580,12 @@
                 </div>
                 
                 <div class="project-card" data-link="https://olincollege.github.io/pie-2024-03/pathfinders/">
+                    <!--
                     <div class="image-placeholder">
                         <i class="fas fa-gamepad"></i>
-                    </div>
+                    </div>-->
+                    
+                    <img src="images/pathfinders.jpeg " class="portfolio-image">
                     <div class="card-content">
                         <h3>PATHFINDERS Arcade Machine</h3>
                         <span class="project-dates">Fall 2024</span>
@@ -560,12 +606,13 @@
         
         <!-- Engineering Projects Page -->
         <div id="engineering" class="page">
-            <h2 class="section-title">Engineering Projects</h2>
+            <h2 class="section-title">Optimization Projects</h2>
             <div class="project-grid">
                 <div class="project-card" data-link="https://drive.google.com/file/d/1F2neSN_UmNWJ8bQG50sv2gWaeW--VP8V/view?usp=sharing">
-                    <div class="image-placeholder">
+                    <!--<div class="image-placeholder">
                         <i class="fas fa-wind"></i>
-                    </div>
+                    </div>-->
+                    <img src="images/high_tunnel.png" class="portfolio-image">
                     <div class="card-content">
                         <h3>High Tunnel Lift Force Analysis</h3>
                         <span class="project-dates">Fall 2024</span>
@@ -583,9 +630,10 @@
                 </div>
                 
                 <div class="project-card" data-link="https://lobsterboatbusiness.netlify.app/">
-                    <div class="image-placeholder">
+                    <!--<div class="image-placeholder">
                        <i class="fas fa-water"></i>
-                    </div>
+                    </div>-->
+                    <img src="images/lobsterboat.jpg" class="portfolio-image">
                     <div class="card-content">
                         <h3>Lobster Fishing Business Optimization</h3>
                         <span class="project-dates">Spring 2025</span>
@@ -602,9 +650,11 @@
                 </div>
                 
                 <div class="project-card" data-link="https://drive.google.com/drive/folders/16YW9gKH7lTDXrwjrKOsvWVTe-I3hzYDW?usp=sharing">
-                    <div class="image-placeholder">
+                    <!--<div class="image-placeholder">
                        <i class="fas fa-headphones"></i>
-                       </div>
+                    </div>-->
+                    <img src="images/audio_engineer.png" class="portfolio-image">
+                       
                     <div class="card-content">
                         <h3>Audio Engineer Course</h3>
                         <span class="project-dates">Spring 2025</span>
@@ -627,9 +677,10 @@
             <h2 class="section-title">Data Analytics Projects</h2>
             <div class="project-grid">
                 <div class="project-card" data-link="https://github.com/chrdn/data-science-S2025/blob/main/challenges/c13-final-assignment.md">
-                    <div class="image-placeholder">
+                    <!--<div class="image-placeholder">
                         <i class="fas fa-smoking"></i>
-                    </div>
+                    </div>-->
+                    <img src="images/island_smoking.png" class="portfolio-image">
                     <div class="card-content">
                         <h3>The Islanders Smoker Project</h3>
                         <span class="project-dates">Spring 2025</span>
